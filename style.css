@@ -63,8 +63,8 @@ a:hover {
 }
 
 .profile-photo {
-  width: 120px;
-  height: 120px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   background: #efe8d8;
   display: flex;
