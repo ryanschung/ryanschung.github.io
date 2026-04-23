@@ -1,0 +1,294 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg: #fdf6e8;
+  --color-text: #2c2c2c;
+  --color-text-light: #666;
+  --color-accent: #2563eb;
+  --color-border: #e8e0d0;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.7;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Layout */
+.layout {
+  display: flex;
+  max-width: 960px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 280px;
+  flex-shrink: 0;
+  padding: 60px 32px 40px 24px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #efe8d8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-light);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+}
+
+.title {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  margin-bottom: 16px;
+}
+
+.bio {
+  font-size: 0.82rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 28px;
+}
+
+.sidebar-nav a {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text);
+  padding: 4px 0;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.sidebar-nav a:hover {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.socials {
+  display: flex;
+  gap: 14px;
+  margin-top: auto;
+}
+
+.socials a {
+  color: var(--color-text-light);
+  transition: color 0.2s;
+}
+
+.socials a:hover {
+  color: var(--color-text);
+}
+
+/* Content */
+.content {
+  flex: 1;
+  padding: 60px 24px 80px 40px;
+  border-left: 1px solid var(--color-border);
+  min-width: 0;
+}
+
+section {
+  margin-bottom: 48px;
+}
+
+section:last-child {
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+}
+
+section > p {
+  color: var(--color-text-light);
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+}
+
+/* Entries */
+.entry {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.entry:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 2px;
+}
+
+.entry-header h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.entry-date {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  white-space: nowrap;
+}
+
+.entry-sub {
+  font-size: 0.82rem;
+  color: var(--color-text-light);
+  margin-bottom: 6px;
+}
+
+.entry-authors {
+  font-size: 0.82rem;
+  color: var(--color-text);
+  margin-bottom: 2px;
+}
+
+.entry p:last-child {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  line-height: 1.7;
+}
+
+/* News */
+.news-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.news-list li {
+  font-size: 0.88rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.news-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.news-date {
+  font-weight: 600;
+  color: var(--color-text);
+  margin-right: 8px;
+}
+
+/* Research Interests */
+.research-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.research-tag {
+  display: inline-block;
+  padding: 6px 14px;
+  background: #efe8d8;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+/* PubMed Link */
+.pubmed-link {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.pubmed-link:hover {
+  text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 40px 24px 24px;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .content {
+    border-left: none;
+    padding: 32px 24px 60px;
+  }
+}
